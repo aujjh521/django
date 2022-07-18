@@ -17,8 +17,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <ul>
-            {%for book in booklist%}
-            <li><a href={{book.id}}>{{book.btitle}} , 發行日期: {{book.bpub_date}}</a></li>
+            {%for hero in list%}
+            <li>{{hero.hname}}</li>
             {%endfor%}
         </ul>
         <script src="" async defer></script>

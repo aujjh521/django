@@ -11,3 +11,9 @@ def index(request): #意思是server等待外面來的request, 再return respons
     booklist = BookInfo.objects.all()
     context = {'booklist': booklist}
     return render(request, 'booktest/index.html',context) # 透過django本身的render一次執行完讀取template & 渲染並返回http response
+
+def show(requset,id):
+    book = BookInfo.objects.get(pk=id)
+    herolist = book.heroinfo_set.all()
+    context = {'list':herolist}
+    return render(requset, 'booktest/show.html',context)
